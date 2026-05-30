@@ -11,9 +11,9 @@ const salonesData = [
         descripcion_larga: "Salón de eventos elegante estilo rústico colonial. Arquitectura con techo alto de madera y vigas expuestas, lámparas colgantes cálidas, grandes ventanales con vista al jardín, piso de piedra o concreto pulido, decoración elegante para eventos sociales y bodas. Mesas redondas con manteles blancos, centros de mesa florales naturales y sillas elegantes. Ambiente cálido, acogedor y exclusivo.",
         precio_por_hora: 180,
         imagenes: [
-            "salon1-1",
-            "salon1-2",
-            "salon1-3"
+            "assets/salones/salon1-1.jpg",
+            "assets/salones/salon1-2.jpg",
+            "assets/salones/salon1-3.jpg"
         ]
     },
     {
@@ -24,9 +24,9 @@ const salonesData = [
         descripcion_larga: "Salón de eventos moderno y minimalista dentro de una finca en Guatemala. Diseño contemporáneo con paredes blancas, techo alto, ventanales grandes de vidrio, mucha iluminación natural, acabados elegantes y limpios. Piso brillante, decoración sofisticada para bodas, recepciones y eventos familiares. Mesas bien organizadas, arreglos florales modernos y ambiente amplio.",
         precio_por_hora: 250,
         imagenes: [
-            "assets/salones/salon2-1",
-            "assets/salones/salon2-2",
-            "assets/salones/salon2-3"
+            "assets/salones/salon2-1.jpg",
+            "assets/salones/salon2-2.jpg",
+            "assets/salones/salon2-3.jpg"
         ]
     },
     {
@@ -37,9 +37,9 @@ const salonesData = [
         descripcion_larga: "Salón de eventos abierto tipo terraza techada. Estructura elegante con techo alto de madera o metal decorativo, laterales abiertos con vista hacia jardines verdes, naturaleza alrededor, iluminación cálida con guirnaldas de luces, decoración elegante para bodas, cumpleaños y eventos especiales. Mesas decoradas y ambiente fresco natural.",
         precio_por_hora: 150,
         imagenes: [
-            "https://images.unsplash.com/photo-1464366400600-7168b3b20014?w=600&h=400&fit=crop",
-            "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&h=400&fit=crop",
-            "https://images.unsplash.com/photo-1464366400600-7168b3b20014?w=600&h=400&fit=crop"
+            "assets/salones/salon3-1.jpg",
+            "assets/salones/salon3-2.jpg",
+            "assets/salones/salon3-3.jpg"
         ]
     }
 ];
