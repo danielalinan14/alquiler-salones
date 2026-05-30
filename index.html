@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUK'UX KAJ - Salones de Eventos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- Navbar con logo clickable y usuario circular -->
+    <nav class="navbar-glass">
+        <div class="nav-container">
+            <div class="logo-nav" onclick="window.location.href='index.html'">
+                <img src="assets/logo.png" alt="RUK'UX KAJ" class="nav-logo" onerror="this.style.display='none'">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">🏠 Inicio</a>
+                <a href="admin.html" id="admin-link" style="display:none;">👑 Admin</a>
+                <a href="dashboard.html">📋 Mis Reservas</a>
+                <div class="user-icon" id="user-icon" onclick="window.location.href='login.html'">
+                    <span>👤</span>
+                </div>
+                <button onclick="cerrarSesion()" id="logout-btn" style="display:none;">🚪 Salir</button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero section -->
+    <div class="hero">
+        <h1>RUK'UX KAJ</h1>
+        <p>El corazón de nuestro cielo - Espacios únicos para tus eventos</p>
+    </div>
+    
+    <div class="container">
+        <div class="salones-grid" id="salones-container">
+            <div class="loading">Cargando salones...</div>
+        </div>
+    </div>
+    
+    <script src="js/supabase-client.js"></script>
+    <script src="js/carrusel.js"></script>
+</body>
+</html>
