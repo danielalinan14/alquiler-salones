@@ -1,0 +1,146 @@
+/* ============================================
+   PÁGINA INDIVIDUAL DEL SALÓN
+   ============================================ */
+.salon-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.salon-header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.salon-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.salon-stats span {
+    background: rgba(0,0,0,0.3);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+.descripcion-larga {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 15px;
+    line-height: 1.8;
+}
+
+/* Sección de reserva */
+.reserva-section {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.calendario-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .calendario-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Horarios ocupados */
+.horarios-lista {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.fecha-reservas {
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.fecha-reservas strong {
+    color: var(--cool-steel);
+}
+
+.fecha-reservas ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.fecha-reservas li {
+    padding: 3px 0;
+    color: #ff6b6b;
+}
+
+/* Flatpickr personalizado */
+.flatpickr-calendar {
+    background: var(--space-indigo) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 15px !important;
+}
+
+.flatpickr-day.selected {
+    background: var(--cerulean) !important;
+    border-color: var(--cerulean) !important;
+}
+
+.flatpickr-day.disabled {
+    color: #666 !important;
+}
+
+/* Formulario reserva */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--cool-steel);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    color: white;
+}
+
+.opcion-pago {
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.opcion-pago label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.codigo-pago-field {
+    margin-top: 10px;
+    display: none;
+}
+
+.codigo-pago-field.show {
+    display: block;
+}
