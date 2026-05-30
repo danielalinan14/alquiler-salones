@@ -2,7 +2,7 @@
 // CONFIGURACIÓN DE SUPABASE
 // ============================================
 
-// !!! REEMPLAZA ESTOS VALORES CON LOS TUYOS DE SUPABASE !!!
+// !!! VALORES DE SUPABASE !!!
 const SUPABASE_URL = 'https://mdkhyahemimkpbajfsir.supabase.co';      // Ej: 'https://xxxxx.supabase.co'
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ka2h5YWhlbWlta3BiYWpmc2lyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwODExOTQsImV4cCI6MjA5NTY1NzE5NH0.9mTuKJKTPkBx7D7feajLJ-u2VGrezRWjXm26kvJQyho'; // Ej: 'eyJhbGciOiJIUzI1NiIs...'
 
