@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Salón - RUK'UX KAJ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/salon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+</head>
+<body>
+    <nav class="navbar-glass">
+        <div class="nav-container">
+            <div class="logo-nav" onclick="window.location.href='index.html'">
+                <img src="assets/logo.png" alt="RUK'UX KAJ" class="nav-logo" onerror="this.style.display='none'">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">🏠 Inicio</a>
+                <a href="dashboard.html">📋 Mis Reservas</a>
+                <div class="user-icon" id="user-icon" onclick="window.location.href='login.html'">
+                    <span>👤</span>
+                </div>
+                <button onclick="cerrarSesion()">🚪 Salir</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div id="salon-detalle"></div>
+        
+        <div class="reserva-section">
+            <h2>📅 Reservar este salón</h2>
+            
+            <div class="calendario-container">
+                <div class="calendario-info">
+                    <h3>Calendario de disponibilidad</h3>
+                    <div id="calendario"></div>
+                </div>
+                
+                <div class="horarios-container">
+                    <h3>📆 Horarios ocupados</h3>
+                    <div id="horarios-ocupados" class="horarios-lista"></div>
+                </div>
+            </div>
+            
+            <div class="form-reserva">
+                <h3>✨ Realizar reserva</h3>
+                <form id="form-reserva" onsubmit="event.preventDefault()">
+                    <div class="form-group">
+                        <label>📅 Fecha:</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>⏰ Hora de inicio:</label>
+                        <select id="hora-inicio" required>
+                            <option value="">Seleccionar</option>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>⌛ Hora de fin:</label>
+                        <select id="hora-fin" required>
+                            <option value="">Seleccionar</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="opcion-pago">
+                        <label>
+                            <input type="radio" name="opcion-pago" id="tiene-codigo" value="si"> 
+                            Tengo código de pago (8 dígitos)
+                        </label>
+                        <label>
+                            <input type="radio" name="opcion-pago" id="no-codigo" value="no" checked> 
+                            No tengo código de pago
+                        </label>
+                        
+                        <div id="codigo-pago-field" class="codigo-pago-field">
+                            <label>Código de pago:</label>
+                            <input type="text" id="codigo-pago" maxlength="8" placeholder="Ej: 12345678">
+                        </div>
+                    </div>
+                    
+                    <button type="button" onclick="confirmarReserva()" class="btn-reservar">
+                        ✨ Confirmar Reserva
+                    </button>
+                    <div id="reserva-mensaje"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/supabase-client.js"></script>
+    <script src="js/calendario.js"></script>
+</body>
+</html>
