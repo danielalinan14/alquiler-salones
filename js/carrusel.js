@@ -73,7 +73,20 @@ async function cargarSalones() {
 }
 
 // Alternar descripción completa
-function toggleDescripcion(salonId) {
+/*function toggleDescripcion(salonId) {
+    const descElem = document.getElementById(`desc-full-${salonId}`);
+    const btn = event.target;
+    
+    if (descElem.style.display === 'none' || !descElem.style.display) {
+        descElem.style.display = 'block';
+        btn.textContent = 'Ver menos detalles ←';
+    } else {
+        descElem.style.display = 'none';
+        btn.textContent = 'Ver más detalles →';
+    }
+}*/
+// En js/carrusel.js - CORREGIDO
+function toggleDescripcion(salonId, event) {
     const descElem = document.getElementById(`desc-full-${salonId}`);
     const btn = event.target;
     
